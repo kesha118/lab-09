@@ -17,7 +17,7 @@ root.title("Pokemon Information")
 
 # TODO: Create the frames
 frame_input = ttk.Frame(root)
-frame_input.grid(row=1, column=0, columnspan=2, pady=(20,1))
+frame_input.grid(row=0, column=0, columnspan=2, pady=(20,1))
 
 frame_info = ttk.LabelFrame(root, text="Info")
 frame_info.grid(row=1, column=0, padx=(20,10), pady=(10,20), sticky=N)
@@ -39,8 +39,8 @@ def handle_button_get_info():
      if poke_info:
           label_height_value = [text] = str(poke_info['height']) + ' dm'
           label_weight_value = [text] = str(poke_info['weight']) + ' hg'
-          #types_list = [t['type']['name'].capitilize() for t in poke_info['types']]
-
+          types_list = [t['type']['name'].capitilize() for t in poke_info['types']]
+          label
 button_get_info = ttk.button(frame_input, text='Get Info', command=handle_button_get_info)
 button_get_info.grid(row=0, column=2, padx=10, pady=10)
 # TODO: Populate the user input frame with widgets
